@@ -1,0 +1,13 @@
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    apply from: "$rootDir/buildSystem/dependencies.gradle"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlin.stdlib
+
+    implementation deps.dagger.dagger
+    implementation deps.dagger.android
+    implementation deps.dagger.androidSupport
+    kapt deps.dagger.compiler
+    kapt deps.dagger.androidProcessor
+}

@@ -1,0 +1,6 @@
+apply from: "$rootDir/buildSystem/android_library.gradle"
+
+dependencies {
+    implementation deps.retrofit.client
+    implementation deps.retrofit.gsonConverter
+}

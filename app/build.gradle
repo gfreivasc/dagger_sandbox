@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+apply from: "$rootDir/buildSystem/android_module.gradle"
+
+android {
+    defaultConfig {
+        applicationId "com.gabrielfv.github"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            matchingFallbacks = ['release']
+        }
+    }
+}
+
+dependencies {
+    implementation project(':features:login')
+
+    implementation project(':libraries:data')
+    implementation project(':libraries:design')
+    implementation project(':libraries:general')
+}
