@@ -10,7 +10,6 @@ import javax.inject.Inject
 
 class LoginActivity : AppCompatActivity() {
     @Inject
-    @AsViewModel
     lateinit var viewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {

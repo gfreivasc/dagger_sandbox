@@ -14,11 +14,10 @@ abstract class ViewModelProviderModule<A : AppCompatActivity, VM : ViewModel>(
 ) {
     @Provides
     fun providesViewModelFactory(
-        provider: Provider<VM>
+        @AsViewModel provider: Provider<VM>
     ) = DaggerViewModelFactory(klass, provider)
 
     @Provides
-    @AsViewModel
     fun providesViewModel(
         activity: A,
         factory: DaggerViewModelFactory<@JvmSuppressWildcards VM>
