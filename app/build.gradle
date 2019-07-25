@@ -19,5 +19,5 @@ dependencies {
 
     implementation project(':libraries:data')
     implementation project(':libraries:design')
-    implementation project(':libraries:general')
+    implementation project(':libraries:common')
 }

@@ -12,9 +12,9 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/login" />
             <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/common" />
             <option value="$PROJECT_DIR$/libraries/data" />
             <option value="$PROJECT_DIR$/libraries/design" />
-            <option value="$PROJECT_DIR$/libraries/general" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

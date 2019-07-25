@@ -2,7 +2,7 @@ apply from: "$rootDir/buildSystem/android_library.gradle"
 
 dependencies {
     implementation project(':libraries:design')
-    implementation project(':libraries:general')
+    implementation project(':libraries:common')
     implementation project(':libraries:data')
     implementation deps.androidx.constraint
     implementation deps.material

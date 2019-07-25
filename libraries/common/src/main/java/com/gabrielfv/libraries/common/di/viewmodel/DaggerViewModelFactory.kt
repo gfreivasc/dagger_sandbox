@@ -1,4 +1,4 @@
-package com.gabrielfv.libraries.general.di
+package com.gabrielfv.libraries.common.di.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
