@@ -7,7 +7,7 @@ import com.gabrielfv.libraries.common.di.viewmodel.ViewModelProviderModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
-@Module
+@Module(includes = [LoginModule.Providers::class])
 interface LoginModule {
 
     @PerScreen
@@ -15,5 +15,5 @@ interface LoginModule {
     fun contributesInjector(): LoginActivity
 
     @Module
-    class Providers : ViewModelProviderModule<LoginActivity, LoginViewModel>(LoginViewModel::class)
+    class Providers : ViewModelProviderModule<LoginViewModel, LoginActivity>(LoginViewModel::class)
 }

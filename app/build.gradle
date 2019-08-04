@@ -16,6 +16,7 @@ android {
 
 dependencies {
     implementation project(':features:login')
+    implementation project(':features:repos')
 
     implementation project(':libraries:data')
     implementation project(':libraries:design')

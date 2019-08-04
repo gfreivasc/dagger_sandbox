@@ -2,15 +2,21 @@ package com.gabrielfv.features.login
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.gabrielfv.feature.login.R
-import com.gabrielfv.libraries.common.ViewModelActivity
+import com.gabrielfv.libraries.common.di.AsViewModel
+import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_login.*
+import javax.inject.Inject
 
-class LoginActivity : ViewModelActivity<LoginViewModel>() {
+class LoginActivity : AppCompatActivity() {
+    @Inject @AsViewModel
+    lateinit var viewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
@@ -35,7 +41,7 @@ class LoginActivity : ViewModelActivity<LoginViewModel>() {
         }
     }
 
-    fun listenLoginStatus(loginStatus: LiveData<Boolean>) {
+    private fun listenLoginStatus(loginStatus: LiveData<Boolean>) {
         loginStatus.observe(this, Observer { success ->
             if (success) Toast.makeText(this, "Succeeded", Toast.LENGTH_LONG).show()
         })
